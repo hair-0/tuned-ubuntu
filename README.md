@@ -7,12 +7,12 @@
 Bibata 光标）、Konsole、fcitx5 输入法、GTK/字体渲染、zsh + powerlevel10k、软件清单、
 系统级微调脚本。仓库公开，不含任何密钥。
 
-> **与旧仓库的分工**：zsh / powerlevel10k 的 **Ubuntu 22.04 / WSL2** 版本保留在
-> [hair-0/ohmyzsh-config](https://github.com/hair-0/ohmyzsh-config)
-> （miniconda3、ROS 2 Humble、WSL 互操作别名）。
-> 本仓库面向 **Ubuntu 24.04+ 桌面**，其中的 zsh/p10k 已更新为 24.04 版
-> （miniforge3、ROS 2 Jazzy、nvm 默认关闭、tk25 workspace），并在此基础上扩展了整套桌面配置。
-> 两版 `.zshrc.tmpl` 的主要分歧点：conda 路径、ROS 发行版、WSL 专属行；请勿混用。
+> **与旧仓库的关系**：[hair-0/ohmyzsh-config](https://github.com/hair-0/ohmyzsh-config)
+> 是只含 zsh / powerlevel10k 的精简仓库，本仓库是完整桌面版。
+> 两个仓库的 `dot_zshrc.tmpl` / `dot_p10k.zsh` **内容完全一致**，且为跨系统自适应：
+> 自动探测 conda 目录（`~/miniforge3` / `~/miniconda3`）、自动适配 ROS 发行版
+> （humble/jazzy…）、WSL 下自动启用 `e.` 别名、nvm 通过 `~/.zshrc.local` 按机器启用。
+> 差异只在仓库范围（shell-only vs 全桌面）；改动这两个文件时请**两边同步提交**。
 
 ---
 
@@ -62,7 +62,7 @@ tuned-ubuntu/                          chezmoi 源目录（git 仓库，克隆�
 │   └── flatpaks.txt                       flathub org.fcitx.Fcitx5
 │
 └── dotfiles 到 $HOME 的映射
-    ├── dot_zshrc.tmpl             →  ~/.zshrc                 （conda 路径按机器渲染）
+    ├── dot_zshrc.tmpl             →  ~/.zshrc                 （conda/ROS/WSL 环境自适应）
     ├── dot_p10k.zsh               →  ~/.p10k.zsh
     ├── dot_gitconfig              →  ~/.gitconfig
     ├── dot_pam_environment        →  ~/.pam_environment       （GTK/QT/XMODIFIERS 输入法变量）
@@ -413,12 +413,15 @@ kquitapp5 plasmashell; sleep 2; setsid plasmashell >/dev/null 2>&1 & disown
 ### 6. 开发环境
 
 ```sh
-# miniforge3（.zshrc 按 ~/miniforge3 渲染，路径必须一致）
+# miniforge3（.zshrc 会自动探测 ~/miniforge3 / ~/miniconda3，装到任一目录即可）
 curl -fLO https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 bash Miniforge3-Linux-x86_64.sh -b -p ~/miniforge3
-~/miniforge3/bin/conda init zsh
+# 注意：不要运行 `conda init zsh`——会向 ~/.zshrc 追加重复块，与 chezmoi 管理冲突
 
-# nvm（.zshrc 中默认被注释，装好后取消注释那 3 行）
+# nvm：默认不加载（与 p10k 的 nvm 段无关）。装好后在 ~/.zshrc.local 中加入：
+#   export NVM_DIR="$HOME/.nvm"
+#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+#   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
 # fzf（.zshrc 会 source ~/.fzf.zsh）
@@ -519,4 +522,4 @@ shell 历史、缓存、字体目录（985 MB）、`~/.config/nvim`（由独立�
   [age/gpg 加密](https://www.chezmoi.io/user-guide/encryption/)功能。
 - 关联仓库：
   - [hair-0/neovim-config](https://github.com/hair-0/neovim-config) — neovim 配置（独立 git 仓库）
-  - [hair-0/ohmyzsh-config](https://github.com/hair-0/ohmyzsh-config) — 旧版 zsh/p10k 配置，保留给 Ubuntu 22.04 / WSL2
+  - [hair-0/ohmyzsh-config](https://github.com/hair-0/ohmyzsh-config) — 只含同一份跨系统自适应的 zsh/p10k（shell-only 精简仓库）
