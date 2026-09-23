@@ -1,0 +1,11 @@
+# snap 清单：每行一个包名，可追加 " --classic" 启用经典模式
+blender --classic
+cmake --classic
+emacs --classic
+nvim --classic
+ffmpeg-2404
+firefox
+freecad
+gazebo
+gimp
+vlc

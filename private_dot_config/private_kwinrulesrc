@@ -1,0 +1,17 @@
+[$Version]
+update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
+
+[1]
+Description=Konsole 1858x1464 @3035,278
+position=3029,238
+positionrule=3
+size=1870,1510
+sizerule=3
+types=1
+wmclass=konsole
+wmclasscomplete=false
+wmclassmatch=1
+
+[General]
+count=1
+rules=1

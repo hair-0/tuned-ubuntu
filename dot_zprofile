@@ -1,0 +1,3 @@
+
+# Created by `pipx` on 2026-09-10 19:36:59
+export PATH="$PATH:/home/hank/.local/bin"

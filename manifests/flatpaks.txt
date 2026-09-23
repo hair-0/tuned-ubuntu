@@ -1,0 +1,2 @@
+# flatpak 清单：每行 "<remote> <app-id>"
+flathub org.fcitx.Fcitx5

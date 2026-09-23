@@ -1,0 +1,127 @@
+# ============================================================================
+# .chezmoiignore — 永不从本仓库应用到目标目录的内容
+# 同时也防止未来 `chezmoi add ~/.config` 之类误收录这些文件。
+# 分类：密钥凭据 / 应用数据 / 机器相关 / 历史缓存 / 大文件
+# ============================================================================
+
+# 仓库自身的说明文件
+README.md
+
+# 仓库内用于部署的清单/脚本资产（只被 .chezmoiscripts 读取，不应用到 home）
+manifests
+
+# ---------------------------------------------------------------------------
+# 密钥与凭据 — 公开仓库绝对不入库
+# ---------------------------------------------------------------------------
+.ssh
+.gnupg
+.openai_config
+.claude
+.claude.json
+.claude.json.backup
+.cline
+.continue
+.copilot
+.cursor
+.kimi-code
+.config/goa-1.0
+.config/kwalletrc
+.config/kwalletd
+.config/plasma-nm
+.config/remmina
+.config/libaccounts-glib
+.config/opencode
+.local/share/opencode
+.git-credentials
+.netrc
+
+# ---------------------------------------------------------------------------
+# 应用数据 / 配置（体积大或纯本机状态）
+# ---------------------------------------------------------------------------
+.config/nvim
+.config/Code
+.config/Cursor
+.config/chromium
+.config/google-chrome
+.config/microsoft-edge
+.config/LarkShell
+.config/TDAppDesktop
+.config/obsidian
+.config/JetBrains
+.config/GitHub Desktop
+.config/baidunetdisk
+.config/cef_user_data
+.config/marktext
+.config/libreoffice
+.config/GIMP
+.config/Kingsoft
+.config/kde.org
+.config/session
+.config/systemd
+.config/gtk-3.0/bookmarks
+.config/fcitx5/conf/cached_layouts
+.config/fcitx5/conf/*.bak
+.local/share/nvim
+.local/state/nvim
+.mozilla
+.vscode
+.vscode-shared
+.vim
+.emacs.d
+.wine
+.bytertc
+.xwechat
+.var
+.npm
+.nvm
+.nuget
+.dotnet
+.conda
+.miniforge*
+miniforge3
+.ros
+.mujoco
+mujoco
+vmware
+
+# ---------------------------------------------------------------------------
+# 机器相关：显示器布局 / 会话 / 备份
+# ---------------------------------------------------------------------------
+.config/kscreen
+.local/share/kscreen
+kde-backup-*
+.local/share/recently-used.xbel
+.startpagerecent.xml
+startpagerecent.xml
+
+# ---------------------------------------------------------------------------
+# 历史、缓存与临时文件
+# ---------------------------------------------------------------------------
+.zsh_history
+.bash_history
+.zsh_history.*
+.zcompdump*
+.z
+.z.lock
+.lesshst
+.viminfo
+.sudo_as_admin_successful
+.fzf.zsh
+.wget-hsts
+.pki
+.cache
+.tldr
+
+# ---------------------------------------------------------------------------
+# 用户目录与本地覆盖（可能含机器特有内容）
+# ---------------------------------------------------------------------------
+.zshrc.local
+.profile.d
+Documents
+Downloads
+Desktop
+Music
+Pictures
+Public
+Templates
+Videos

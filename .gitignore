@@ -1,0 +1,13 @@
+# Shell history — never track
+.zsh_history
+.bash_history
+.zsh_history.*
+
+# Env files and credentials — never track
+.env
+.env.*
+.ssh
+
+# Compiled zsh files
+*.zwc
+*.zwc.old

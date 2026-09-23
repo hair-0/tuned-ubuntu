@@ -1,0 +1,59 @@
+1920x1280 screen: Height=692
+1920x1280 screen: Width=1019
+1920x1280 screen: XPosition=505
+1920x1280 screen: YPosition=377
+2 screens: Height=976
+2 screens: Width=1239
+2 screens: XPosition=2990
+2 screens: YPosition=228
+2304x1536 screen: Height=847
+2304x1536 screen: Width=1223
+2304x1536 screen: XPosition=389
+2304x1536 screen: YPosition=277
+DP-3 eDP-1=eDP-1
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAEQAAAClPwCAAAAAvsAAAAiAFEAdQBpAGMAawBDAG8AbQBtAGEAbgBkAHMARABvAGMAawAAAAAgAAAClAAAAR0A////+wAAABwAUwBTAEgATQBhAG4AYQBnAGUAcgBEAG8AYwBrAAAAACAAAAKuAAAA1AD///8AAATXAAADsQAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=
+eDP-1=eDP-1
+
+[Desktop Entry]
+DefaultProfile=Dev.profile
+
+[General]
+ConfigVersion=1
+
+[KonsoleWindow]
+RememberWindowSize=false
+ShowWindowTitleOnTitleBar=true
+
+[MainWindow]
+1920x1280 screen: Height=784
+1920x1280 screen: Width=1155
+1920x1280 screen: XPosition=355
+1920x1280 screen: YPosition=377
+2 screens: Height=976
+2 screens: Width=1239
+2 screens: Window-Maximized=true
+2 screens: XPosition=2919
+2 screens: YPosition=209
+2304x1536 screen: Height=570
+2304x1536 screen: Width=1133
+2304x1536 screen: XPosition=323
+2304x1536 screen: YPosition=583
+2880x1920 screen: Height=866
+2880x1920 screen: Width=1249
+2880x1920 screen: XPosition=984
+2880x1920 screen: YPosition=697
+DP-3 eDP-1=eDP-1
+MenuBar=Enabled
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAEQAAADsfwCAAAAAvsAAAAiAFEAdQBpAGMAawBDAG8AbQBtAGEAbgBkAHMARABvAGMAawAAAAAfAAADsQAAAR0A////+wAAABwAUwBTAEgATQBhAG4AYQBnAGUAcgBEAG8AYwBrAAAAAagAAAIoAAAA1AD///8AAAeAAAAEmAAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+eDP-1=eDP-1
+
+[Notification Messages]
+CloseAllTabs=true
+
+[SearchSettings]
+SearchCaseSensitive=true
+
+[UiSettings]
+ColorScheme=catppuccin-mocha
