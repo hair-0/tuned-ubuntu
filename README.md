@@ -7,6 +7,13 @@
 Bibata 光标）、Konsole、fcitx5 输入法、GTK/字体渲染、zsh + powerlevel10k、软件清单、
 系统级微调脚本。仓库公开，不含任何密钥。
 
+> **与旧仓库的分工**：zsh / powerlevel10k 的 **Ubuntu 22.04 / WSL2** 版本保留在
+> [hair-0/ohmyzsh-config](https://github.com/hair-0/ohmyzsh-config)
+> （miniconda3、ROS 2 Humble、WSL 互操作别名）。
+> 本仓库面向 **Ubuntu 24.04+ 桌面**，其中的 zsh/p10k 已更新为 24.04 版
+> （miniforge3、ROS 2 Jazzy、nvm 默认关闭、tk25 workspace），并在此基础上扩展了整套桌面配置。
+> 两版 `.zshrc.tmpl` 的主要分歧点：conda 路径、ROS 发行版、WSL 专属行；请勿混用。
+
 ---
 
 ## 目录
@@ -510,4 +517,6 @@ shell 历史、缓存、字体目录（985 MB）、`~/.config/nvim`（由独立�
 - `appletsrc` / `kwinrulesrc` 与旧机双屏布局（eDP-1 + DP-3）绑定，新机需按上文微调。
 - 公开仓库永远不要提交私钥/密码；如需备份敏感配置，请用 chezmoi 的
   [age/gpg 加密](https://www.chezmoi.io/user-guide/encryption/)功能。
-- 关联仓库：[hair-0/neovim-config](https://github.com/hair-0/neovim-config)（独立 git 仓库）。
+- 关联仓库：
+  - [hair-0/neovim-config](https://github.com/hair-0/neovim-config) — neovim 配置（独立 git 仓库）
+  - [hair-0/ohmyzsh-config](https://github.com/hair-0/ohmyzsh-config) — 旧版 zsh/p10k 配置，保留给 Ubuntu 22.04 / WSL2
